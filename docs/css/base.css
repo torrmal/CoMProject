@@ -382,6 +382,7 @@ a:focus {
 	cursor: default;
 	text-transform: uppercase;
 	pointer-events: none;
+	overflow: hidden;
 }
 
 .content a {
