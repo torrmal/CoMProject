@@ -1,0 +1,26 @@
+{
+  "name": "com_project",
+  "version": "1.0.0",
+  "description": "Website for the church of music",
+  "source": "src/index8.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "static"
+    ]
+  },
+  "author": "Jorge Torres",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/config-default": "2.0.0",
+    "parcel": "^2.0.0",
+    "parcel-reporter-static-files-copy": "^1.3.0",
+    "three": "^0.132.2"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
