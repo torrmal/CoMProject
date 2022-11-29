@@ -5,7 +5,9 @@
   "source": "src/index8.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "predeploy": "rm -rf dist && parcel build ./*.html && cp -rv src/* dist/",
+    "deploy": "gh-pages -d dist"
   },
   "staticFiles": {
     "staticPath": [
