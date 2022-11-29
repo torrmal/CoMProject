@@ -5,8 +5,8 @@
   "source": "src/index8.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
-    "predeploy": "rm -rf dist && parcel build ./*.html && cp -rv src/* dist/",
+    "build": "parcel build --public-url 'https://torrmal.github.io/CoMProject/' ",
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url 'https://torrmal.github.io/CoMProject/' ",
     "deploy": "gh-pages -d dist"
   },
   "staticFiles": {

@@ -1,0 +1,2 @@
+const s=e=>{let t,o;e.preload=()=>{t=e.loadSound("audio/demo9.mp3?a=1")},e.setup=()=>{playBtn=document.querySelector("#play-btn"),playBtn.addEventListener("click",(()=>{document.body.classList.add("start-anim"),t.loop(),setTimeout(window.loadAllMan,20200)})),e.pixelDensity(1),e.createCanvas(e.windowWidth,e.windowHeight,e.WEBGL),o=document.querySelector("#toggle-btn"),o.addEventListener("click",(()=>{o.classList.toggle("toggle--on"),this.toggleAudio()}))},toggleAudio=()=>{t.isPlaying()?t.pause():t.loop()}};new p5(s);
+//# sourceMappingURL=index8.4490a2f5.js.map
