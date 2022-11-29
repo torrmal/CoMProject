@@ -64,7 +64,7 @@ window.loadAllMan = function () {
 
   let turtle = null;
   new OBJLoader().load(
-    "models/man.obj",
+    "/CoMProject/models/man.obj",
     (obj) => {
       turtle = obj.children[0];
       initLines();
