@@ -1,0 +1,39 @@
+@font-face {
+  font-family: kionaregular;
+  src: url("kiona-regular-webfont.6f8ea0bf.woff") format("woff2"), url("kiona-regular-webfont.6f8ea0bf.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: walkway_condensedregular;
+  src: url("walkway_condensed-webfont.1fa2d4fc.woff2") format("woff2"), url("walkway_condensed-webfont.997f5f5e.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  --color-link: #d3e5fc;
+  background-color: #000;
+  font-family: kionaregular;
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.screen {
+  text-transform: uppercase;
+}
+
+.content__title {
+  font-size: 8vw;
+  font-weight: 900;
+}
+
+.content__credits {
+  letter-spacing: 1px;
+  max-width: 42rem;
+  font-family: walkway_condensedregular;
+  font-size: 1.15rem;
+}
+
+/*# sourceMappingURL=index8.80743b24.css.map */
