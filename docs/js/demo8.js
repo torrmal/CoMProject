@@ -3,16 +3,15 @@ const s = (p) => {
 
   p.preload = () => {
     audio = p.loadSound('audio/demo9.mp3?a=1')
-    demo8Shader = p.loadShader('shaders/base.vert', 'shaders/d2.frag')
-    img = p.loadImage('img/11.png?a=1')
-    d_map = p.loadImage('img/clouds.jpg')
+    
   }
 
   p.setup = () => {
       playBtn = document.querySelector('#play-btn')
       playBtn.addEventListener('click', () => {
         document.body.classList.add('start-anim')
-          audio.loop()
+          audio.loop();
+          setTimeout(window.loadAllMan, 20200);// window.loadAllMan();
       })
 
       p.pixelDensity(1)
@@ -24,38 +23,10 @@ const s = (p) => {
         this.toggleAudio()
       })
 
-      fft = new p5.FFT()
-      p.shader(demo8Shader)
-
-      demo8Shader.setUniform('u_resolution', [p.windowWidth, p.windowHeight])
-      demo8Shader.setUniform('d_map', d_map)
-      demo8Shader.setUniform('u_texture', img)
-      demo8Shader.setUniform('u_tResolution', [img.width, img.height])
+      
   }
 
-  p.draw = () => {
-    fft.analyze()
-
-    const bass    = fft.getEnergy("bass")
-    const treble  = fft.getEnergy("treble")
-    const mid     = fft.getEnergy("mid")
-
-    const mapBass     = p.map(bass, 0, 255, 5, 10.0)
-    const mapTremble  = p.map(treble, 0, 255, 0, 0.0)
-    const mapMid      = p.map(mid, 0, 255, 0.0, 0.1)
-
-    demo8Shader.setUniform('u_time', p.frameCount / 20)
-    demo8Shader.setUniform('u_bass', mapBass)
-    demo8Shader.setUniform('u_tremble', mapTremble)
-    demo8Shader.setUniform('u_mid', mapMid)
-
-    p.rect(0,0, p.width, p.height)
-  }
-
-  p.windowResized = () => {
-    p.resizeCanvas(p.windowWidth, p.windowHeight)
-    demo8Shader.setUniform('u_resolution', [p.windowWidth, p.windowHeight])
-  }
+ 
 
   toggleAudio = () => {
     if (audio.isPlaying()) {
